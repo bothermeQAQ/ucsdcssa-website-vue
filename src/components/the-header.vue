@@ -5,13 +5,13 @@
       <el-row justify="space-between" align="middle">
 
         <!--CSSA LOGO-->
-        <el-col :span="16" :offset="2">
+        <el-col :span="12" :offset="2">
           <el-row align="middle">
             <el-image class="logo" :src="getAssetsFile('logo-with-text.png')" fit="contain"></el-image>
           </el-row>
         </el-col>
 
-        <el-col :span="6">
+        <el-col :span="8">
           <el-row justify="space-between" align="middle">
 
             <!--主页按钮-->
@@ -42,7 +42,7 @@
             <!--</el-col>-->
 
             <!--学生服务折叠面板-->
-            <el-col :span="3.5">
+            <el-col :span="3">
               <el-dropdown>
           <span class="el-dropdown-link">
             学生服务
@@ -91,7 +91,7 @@
             <!--  </el-col>-->
 
             <!--部门折叠面板-->
-            <el-col :span="6">
+            <el-col :span="3">
               <el-dropdown>
           <span class="el-dropdown-link">
             部门介绍
@@ -136,6 +136,17 @@
             <!--      </template>-->
             <!--    </el-dropdown>-->
             <!--  </el-col>-->
+
+            <!-- 赞助商部分 -->
+            <el-col :span="4">
+              <div>
+                <el-button plain class="el-dropdown-link" id="home-page-button" link
+                           @click="router.replace({name: 'Sponsors'}); 
+                           clearButtonState('home-page-button');">赞助商
+                </el-button>
+              </div>
+            </el-col>
+            <!-- 赞助商部分结尾 -->
 
           </el-row>
         </el-col>

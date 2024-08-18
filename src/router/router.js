@@ -10,6 +10,7 @@ import MobileCardInstructions from "../views/mobile-card-instructions.vue";
 import MobileLoginRegister from "../views/mobile-login-register.vue";
 import MobileResetPassword from "../views/mobile-reset-password.vue";
 import Application from "../views/application.vue";
+import Sponsors from '../views/Sponsors.vue';
 
 const routes = [
     {
@@ -33,6 +34,11 @@ const routes = [
                 path: "home/application",
                 component: Application,
                 name: "Application"
+            },
+            {
+                path: "Sponsors",
+                component: Sponsors,
+                name: "Sponsors"
             }
         ]
     },
