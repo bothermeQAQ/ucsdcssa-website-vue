@@ -33,6 +33,15 @@
               </div>
             </el-col>
 
+          <!--新增的赞助商按钮-->
+            <el-col :span="3.5">
+              <div>
+                <el-button plain class="el-dropdown-link" id="sponsors-button" link
+                           @click="router.replace({name: 'Sponsors'}); clearButtonState('sponsors-button');">赞助商
+                </el-button>
+              </div>
+            </el-col>
+
             <!--关于CSSA按钮-->
             <!--锚点做起来太麻烦，感觉没有必要，先去掉吧-->
             <!--<el-col :span="4.5">-->

@@ -10,6 +10,7 @@ import MobileCardInstructions from "../views/mobile-card-instructions.vue";
 import MobileLoginRegister from "../views/mobile-login-register.vue";
 import MobileResetPassword from "../views/mobile-reset-password.vue";
 import Application from "../views/application.vue";
+import Sponsors from '../views/Sponsors.vue';
 
 const routes = [
     {
@@ -22,6 +23,11 @@ const routes = [
                 component: Home,
                 name: "Home"
             },
+            {
+                path: '/sponsors',
+                name: 'Sponsors',
+                component: Sponsors
+              },
             {
                 // params现在必须定义在地址里了 https://www.cnblogs.com/liao-yi/articles/17028269.html
                 path: "department/:departmentName",
@@ -76,13 +82,23 @@ const routes = [
         path: "/mobile-reset-password",
         component: MobileResetPassword,
         name: "MobileResetPassword",
-    }
+    },
+//     {
+//     path: '/',
+//     name: 'Home',
+//     component: Home
+//   },
+//   {
+//     path: '/sponsors',
+//     name: 'Sponsors',
+//     component: Sponsors
+//   }
 ]
 
 const router = createRouter({
-    mode: "history",
+    // mode: "history",
     history: createWebHashHistory(),
-    routes,
+    routes
 })
 
 const loginRequiredPages = [
