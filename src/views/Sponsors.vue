@@ -3,8 +3,6 @@
 <template>
   <div class="sponsors">
     <h1>Sponsors</h1>
-    <!-- 这里是赞助商内容 -->
-
     <!-- 赞助商 -->
         <el-col :span="9">  <el-row class="follow" justify="center" > Sponsors </el-row>  
         <el-row justify="center">
@@ -418,8 +416,58 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .sponsors {
-  padding: 20px;
-}
+    padding: 20px;
+  }
+.sponsors:hover {
+    background: #000000 !important;
+  }
+
+.sponsor-container {
+    margin-top: 1vw;
+    background: #ffffff0e;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 45%;
+    line-height: 6vw;
+    vertical-align: middle;
+    padding: 0.1vw;
+    transition: transform 0.3s;
+  }
+
+.icon1{
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+  }
+
+  .icon2{
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: -1.2vw;
+  }
+  .icon-sponsor{
+    margin-left: 0.4vw;
+    margin-bottom: -0.5vw;
+  }
+
+  .logo {
+    width: 4vw;
+
+  }
+
+  .texta {
+    color: lightgrey;
+    margin-left: 3%;
+  }
+
+  .input{
+    width: 10vw;
+
+  }
+
+  .rounded-input {
+    border-radius: 5px;
+    margin-bottom: 1px;
+  }
 </style>
