@@ -30,7 +30,7 @@ const routes = [
             },
             {
                 // params现在必须定义在地址里了 https://www.cnblogs.com/liao-yi/articles/17028269.html
-                path: "department/:departmentName",
+                path: "department/:departmentName/:year",
                 component: Department,
                 name: "Department",
                 props: true

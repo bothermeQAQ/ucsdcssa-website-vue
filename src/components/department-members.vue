@@ -1,58 +1,37 @@
 <template>
-  <el-container>
-    <el-main>
-      <!-- 部门成员 -->
-      <div class="section-title">
-        <h2 style="font-size: 2.222vw; font-weight: bold">{{ $t("department.member") }}</h2>
-        <p>{{ currentYear }} - {{ currentYear + 1 }}</p>
-        <br>
-      </div>
-      <div class="members-container">
-        <el-col>
-          <el-row class="row-bg" :gutter="60">
-            <el-col :span="6" v-for="(value, key, index) in members">
-              <department-tab :photo-src="`${classified.backendAddress}/member/${departmentName}/${key}`"
-                              :member-name="key"
-                              :position="value['position']"/>
-            </el-col>
-          </el-row>
+  <div class="members-container">
+    <el-col>
+      <el-row class="row-bg" :gutter="60">
+        <el-col :span="6" v-for="(value, key, index) in members" :key="index">
+          <department-tab 
+            :photo-src="`${classified.backendAddress}/member/${departmentName}/${key}/${year}`"
+            :member-name="key"
+            :position="value['position']"
+          />
         </el-col>
-      </div>
-    </el-main>
-  </el-container>
-
+      </el-row>
+    </el-col>
+  </div>
 </template>
 
 <script setup>
-import {classified} from "../classified";
+import { classified } from "../classified";
 import DepartmentTab from "./department-tab.vue";
 
-const props = defineProps(["departmentName", "members"])
+// Define props to receive data from the parent component
+const props = defineProps(["departmentName", "members", "year"]);
 
-const currentYear = (new Date()).getFullYear()
-
+const currentYear = (new Date()).getFullYear();
 </script>
 
 <script>
 export default {
-  name: "DepartmentMembers"
-}
+  name: "DepartmentMembers",
+};
 </script>
 
 <style scoped lang="less">
-  .section-title {
-    text-align: center;
-    color: #635551;
-    font-family: sans-serif;
-    margin-bottom: 1.111vw;
-  }
-
-  .members-container {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: auto;
-    color: #313030;
-  }
-
+.section-title {
+  text-align: center;
+}
 </style>

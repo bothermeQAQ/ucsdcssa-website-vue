@@ -6,7 +6,7 @@
           <!--部门照片-->
           <el-row class="image">
             <div class="demo-image">
-              <el-image :src="`${classified.backendAddress}/group-photo/${departmentName}`" :fit="'fill'"/>
+              <el-image :src="`${classified.backendAddress}/group-photo/${departmentName}/${year}`" :fit="'fill'"/>
             </div>
           </el-row>
           <!--部门名称-->
@@ -50,8 +50,8 @@
 <script setup>
 import {classified} from "../classified";
 
-const props = defineProps(["departmentName", "departmentData"])
-
+const props = defineProps(["departmentName", "departmentData", "year"]);
+let year = props.year;
 </script>
 
 <script>

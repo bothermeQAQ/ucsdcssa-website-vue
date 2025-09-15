@@ -1,13 +1,13 @@
-import {createApp} from 'vue'
-import App from './app.vue'
-import './index.less'
-import {createI18n} from "vue-i18n"
-import {Lazyload} from "vant"
-import router from "./router/router"
 import axios from "axios"
-import {classified} from "./classified"
-import zh from "./locales/zh.json"
+import { Lazyload } from "vant"
+import { createApp } from 'vue'
+import { createI18n } from "vue-i18n"
+import App from './app.vue'
+import { classified } from "./classified"
+import './index.less'
 import en from "./locales/en.json"
+import zh from "./locales/zh.json"
+import router from "./router/router"
 
 const i18n = createI18n({
     locale: "zh",
