@@ -6,3 +6,4 @@ dist-ssr
 .idea
 auto-import.d.ts
 src/classified.js
+*.code-workspace

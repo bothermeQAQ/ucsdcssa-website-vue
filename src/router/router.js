@@ -10,7 +10,9 @@ import MobileClasses from "../views/mobile-classes.vue";
 import MobileCardInstructions from "../views/mobile-card-instructions.vue";
 import MobileLoginRegister from "../views/mobile-login-register.vue";
 import MobileResetPassword from "../views/mobile-reset-password.vue";
-import Application from "../views/application.vue";
+import ApplicationForm from "../views/application.vue";
+import ApplicationPortal from "../views/application-portal.vue";
+import ApplicationDepartment from "../views/application-department.vue";
 
 const routes = [
     {
@@ -37,8 +39,24 @@ const routes = [
             },
             {
                 path: "home/application",
-                component: Application,
-                name: "Application"
+                component: ApplicationPortal,
+                name: "ApplicationHomeDeprecated" // 兼容旧链接
+            },
+            {
+                path: "application",
+                component: ApplicationPortal,
+                name: "ApplicationPortal"
+            },
+            {
+                path: "application/:slug",
+                component: ApplicationDepartment,
+                name: "ApplicationDepartment",
+                props: true
+            },
+            {
+                path: "application/form/general",
+                component: ApplicationForm,
+                name: "ApplicationForm"
             }
         ]
     },
